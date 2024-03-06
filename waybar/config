@@ -5,7 +5,7 @@
     "spacing": 6,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["tray", "network", "pulseaudio", "memory", "cpu", "clock"],
+    "modules-right": ["tray", "network", "pulseaudio", "memory", "cpu", "battery", "clock"],
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
@@ -15,6 +15,20 @@
     "hyprland/window": {
         "format": "\uf061 {initialTitle}",
         "separate-outputs": true
+    },
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 2,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false,
+        "on-click": "2"
     },
     "tray": {
         "icon-size": 21,
@@ -43,10 +57,11 @@
         "format-linked": "\uf059 No IP ({ifname})",
         "format-disconnected": "\uf071 Disconnected",
         "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
-        "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}"
+        "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "bash ~/gitPackage/rofi-network-manager/rofi-network-manager.sh"
     },
     "pulseaudio": {
-        "scroll-step": 5,
+        "scroll-step": 1,
         "format": "{icon} {volume}%",
         "format-muted": "\uf6a9",
         "format-bluetooth": "{icon}\uf294 {volume}%",
