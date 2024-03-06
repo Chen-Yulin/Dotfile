@@ -81,9 +81,17 @@ window#waybar.hidden {
     color: black;
 }
 
-#window,
+#window {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+	background: rgba(16, 20, 24, 0.5);
+    color: #ffffff;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 35px;
+}
 #workspaces {
-    margin: 0px 4px;
+    margin: 2px 4px 4px 4px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -97,21 +105,26 @@ window#waybar.hidden {
 }
 
 #clock {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
     border-radius: 0px 20px 20px 0px;
     margin-right: 4px;
-
 }
 
 #battery {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #battery.charging, #battery.plugged {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
@@ -119,6 +132,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
+        margin: 2px 1px 4px 0px;
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
         background-color: #FA8BFF;
         background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
         color: black;
@@ -126,6 +141,8 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
@@ -141,54 +158,72 @@ label:focus {
 }
 
 #cpu {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #memory {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #disk {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #backlight {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
 
 }
 
 #network {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #network.disconnected {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: red;
 }
 
 #pulseaudio {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
 }
 
 #pulseaudio.muted {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: red;
 }
 
 #custom-media {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     color: black;
@@ -197,6 +232,8 @@ label:focus {
 }
 
 #custom-media.custom-spotify {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     color: black;
@@ -206,6 +243,8 @@ label:focus {
 }
 
 #custom-media.custom-vlc {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     color: black;
@@ -214,6 +253,8 @@ label:focus {
 }
 
 #custom-power{
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
     font-size: 16px;
@@ -221,6 +262,8 @@ label:focus {
 
 }
 #custom-launcher{
+    margin: 2px 3px 4px 3px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
     font-size: 18px;
@@ -229,6 +272,8 @@ label:focus {
 }
 
 #custom-updater {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #2BD2FF 0%, #2BD2FF 52%, #2BD2FF 90%);
     color: black;
@@ -247,13 +292,16 @@ label:focus {
 }
 
 #tray {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
 	background: rgba(16, 20, 24, 0.5);
     color: #ffffff;
-    border-radius: 20px;
-    margin-left: 5px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 #tray > .passive {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     -gtk-icon-effect: dim;
     background-color: #FA8BFF;
     background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);
@@ -261,6 +309,8 @@ label:focus {
 }
 
 #tray > .needs-attention {
+    margin: 2px 1px 4px 0px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     -gtk-icon-effect: highlight;
     background-color: #FA8BFF;
     background-image: linear-gradient(-45deg, #FA8BFF 0%, #2BD2FF 52%, #2BD2FF 90%);

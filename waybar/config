@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 46,
     "spacing": 0,
     "margin-top": 10,
     "margin-bottom": 0,
@@ -15,20 +15,20 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
-        "format": "\uf061 {initialTitle}",
+        "format": "  \uf061 {initialTitle}  ",
         "separate-outputs": true
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format": "{icon} {percent}%",
+        "format-icons": ["",""]
     },
     "battery": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% - {time}",
         "format-icons": ["", "", "", "", ""],
         "format-time": "{H}h{M}m",
-        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> Charged",
         "interval": 2,
         "states": {
             "warning": 25,
@@ -53,7 +53,7 @@
     },
     "memory": {
         "interval": 1,
-        "format": "  {used}G",
+        "format": " {used}G",
         "tooltip": true,
         "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
     },
@@ -99,7 +99,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
-        "format": " ",
+        "format": "<span font='JetBrain Mono 18'>󱓞</span>",
         "on-click": "tofi-drun | xargs hyprctl dispatch exec --",
     },
     "custom/power":{
@@ -108,7 +108,7 @@
         "on-click-right": "killall rofi"
     },
     "custom/updater":{
-        "format": "  \uf557  ",
+        "format": " <span font='JetBrain Mono 18'>󰓦󰣇</span> ",
         "on-click": "wezterm -e yay -Syu && wezterm -e sudo pacman -Syu"
     }
 }
