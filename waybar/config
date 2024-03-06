@@ -2,10 +2,12 @@
     "layer": "top",
     "position": "top",
     "height": 36,
-    "spacing": 6,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["tray", "network", "pulseaudio", "memory", "cpu", "battery", "clock"],
+    "spacing": 0,
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "modules-left": ["hyprland/window", "tray"],
+    "modules-center": ["custom/launcher","hyprland/workspaces","custom/updater", "pulseaudio", "network", "cpu", "memory", "temperature","backlight","battery","clock"],
+    "modules-right": [],
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
@@ -15,6 +17,11 @@
     "hyprland/window": {
         "format": "\uf061 {initialTitle}",
         "separate-outputs": true
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
     },
     "battery": {
         "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
@@ -50,6 +57,13 @@
         "tooltip": true,
         "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
     },
+     "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
+    },
     "network": {
         "interval": 1,
         "format-wifi": "\uf1eb {essid} ({signalStrength}%)",
@@ -71,5 +85,30 @@
         },
         "on-click-right": "pavucontrol",
         "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"]
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 25,
+        "format-icons": {
+            "spotify": " ",
+            "default": " "
+        },
+        "escape": true,
+        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "tofi-drun | xargs hyprctl dispatch exec --",
+    },
+    "custom/power":{
+        "format": " ",
+        "on-click": "bash ~/.config/rofi/leave/powermenu.sh",
+        "on-click-right": "killall rofi"
+    },
+    "custom/updater":{
+        "format": "  \uf557  ",
+        "on-click": "wezterm -e yay -Syu && wezterm -e sudo pacman -Syu"
     }
 }
