@@ -1,12 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 46,
+    "height": 40,
     "spacing": 0,
-    "margin-top": 10,
+    "margin-top": 8,
     "margin-bottom": 0,
     "modules-left": ["hyprland/window", "tray"],
-    "modules-center": ["custom/launcher","hyprland/workspaces","custom/updater", "pulseaudio", "network", "cpu", "memory", "temperature","backlight","battery","clock"],
+    "modules-center": ["custom/launcher","hyprland/workspaces","custom/updater","custom/onedrive", "pulseaudio", "network", "cpu", "memory", "temperature","backlight","battery","clock"],
     "modules-right": [],
     "hyprland/workspaces": {
         "format": "{name}",
@@ -108,7 +108,11 @@
         "on-click-right": "killall rofi"
     },
     "custom/updater":{
-        "format": " <span font='JetBrain Mono 18'>󰓦󰣇</span> ",
-        "on-click": "wezterm -e yay -Syu && wezterm -e sudo pacman -Syu"
+        "format": " <span font='JetBrain Mono 18'>󰣇</span>",
+        "on-click": "wezterm -e yay -Syu"
+    },
+    "custom/onedrive":{
+        "format": "<span font='JetBrain Mono 18'></span>",
+        "on-click": "wezterm -e onedrive --synchronize"
     }
 }
