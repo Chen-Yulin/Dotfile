@@ -110,9 +110,13 @@
     "custom/updater":{
         "format": " <span font='JetBrain Mono 18'>󰣇</span>",
         "on-click": "wezterm -e yay -Syu"
+        "tooltip": true,
+        "tooltip-format": "Yay update"
     },
     "custom/onedrive":{
         "format": "<span font='JetBrain Mono 18'></span>",
         "on-click": "wezterm -e onedrive --synchronize"
+        "tooltip": true,
+        "tooltip-format": "Onedrive sync"
     }
 }
