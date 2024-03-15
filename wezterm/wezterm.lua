@@ -11,7 +11,7 @@ config.color_scheme = "EverforestDark (Gogh)"
 
 config.font_size = 16.0
 config.enable_tab_bar = false
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.95
 local act = wezterm.action
 
 -- customize mouse scroll speed but not working for touchpad
