@@ -1,13 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 50,
+    "height": 38,
     "spacing": 0,
-    "margin-top": 0,
+    "margin-top": 8,
     "margin-bottom": 0,
     "modules-left": ["hyprland/window", "tray"],
-    "modules-center": ["custom/launcher","hyprland/workspaces","custom/updater","custom/onedrive", "pulseaudio", "network", "cpu", "memory", "temperature","backlight","battery","clock"],
-    "modules-right": [],
+    "modules-center": ["custom/launcher","custom/updater","custom/onedrive","hyprland/workspaces", "network", "pulseaudio","backlight"],
+    "modules-right": ["cpu", "memory", "temperature","battery","clock","custom/power"],
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
@@ -99,22 +99,21 @@
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
-        "format": "<span font='JetBrain Mono 18'>󱓞</span>",
-        "on-click": "tofi-drun | xargs hyprctl dispatch exec --",
+        "format": "<span font='JetBrain Mono 15'>󱓞</span>",
+        "on-click": "~/.config/rofi/launchers/type-6/launcher.sh",
     },
     "custom/power":{
-        "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/powermenu.sh",
-        "on-click-right": "killall rofi"
+        "format": "",
+        "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh",
     },
     "custom/updater":{
-        "format": " <span font='JetBrain Mono 18'>󰣇</span>",
+        "format": "<span font='JetBrain Mono 15'>󰣇</span>",
         "on-click": "wezterm -e yay -Syu",
         "tooltip": true,
         "tooltip-format": "Yay update"
     },
     "custom/onedrive":{
-        "format": "<span font='JetBrain Mono 18'></span>",
+        "format":"<span font='JetBrain Mono 18'></span>",
         "on-click": "wezterm -e onedrive --synchronize",
         "tooltip": true,
         "tooltip-format": "Onedrive sync"
