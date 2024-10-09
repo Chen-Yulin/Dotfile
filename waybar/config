@@ -3,7 +3,7 @@
     "position": "top",
     "height": 38,
     "spacing": 0,
-    "margin-top": 8,
+    "margin-top": 0,
     "margin-bottom": 0,
     "modules-left": ["hyprland/window", "tray"],
     "modules-center": ["custom/launcher","custom/updater","custom/onedrive","hyprland/workspaces", "network", "pulseaudio","backlight"],
@@ -72,7 +72,8 @@
         "format-disconnected": "\uf071 Disconnected",
         "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
         "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
-        "on-click-right": "bash ~/gitPackage/rofi-network-manager/rofi-network-manager.sh"
+        //"on-click-right": "bash ~/gitPackage/rofi-network-manager/rofi-network-manager.sh"
+        "on-click-right": "alacritty -e nmtui-connect"
     },
     "pulseaudio": {
         "scroll-step": 1,
@@ -99,7 +100,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
-        "format": "<span font='JetBrain Mono 15'>󱓞</span>",
+        "format": "Apps",
         "on-click": "~/.config/rofi/launchers/type-6/launcher.sh",
     },
     "custom/power":{
@@ -108,13 +109,13 @@
     },
     "custom/updater":{
         "format": "<span font='JetBrain Mono 15'>󰣇</span>",
-        "on-click": "wezterm -e yay -Syu",
+        "on-click": "alacritty -e yay -Syu",
         "tooltip": true,
         "tooltip-format": "Yay update"
     },
     "custom/onedrive":{
         "format":"<span font='JetBrain Mono 18'></span>",
-        "on-click": "wezterm -e onedrive --synchronize",
+        "on-click": "onedrivegui",
         "tooltip": true,
         "tooltip-format": "Onedrive sync"
     }
