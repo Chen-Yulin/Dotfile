@@ -7,7 +7,7 @@
     "margin-bottom": 0,
     "modules-left": ["hyprland/window", "tray"],
     "modules-center": ["custom/launcher","custom/updater","custom/onedrive","hyprland/workspaces", "network", "pulseaudio","backlight"],
-    "modules-right": ["cpu", "memory", "temperature","battery","clock","custom/power"],
+    "modules-right": ["custom/scroller-mode", "cpu", "memory", "temperature","battery","clock","custom/power"],
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
@@ -73,7 +73,7 @@
         "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
         "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
         //"on-click-right": "bash ~/gitPackage/rofi-network-manager/rofi-network-manager.sh"
-        "on-click-right": "alacritty -e nmtui-connect"
+        "on-click-right": "alacritty --class floating -e nmtui-connect"
     },
     "pulseaudio": {
         "scroll-step": 1,
@@ -101,11 +101,11 @@
     },
     "custom/launcher":{
         "format": "Apps",
-        "on-click": "~/.config/rofi/launchers/type-6/launcher.sh",
+        "on-click": "~/.config/rofi/launchers/type-5/launcher.sh",
     },
     "custom/power":{
         "format": "",
-        "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh",
+        "on-click": "~/.config/rofi/powermenu/type-5/powermenu.sh",
     },
     "custom/updater":{
         "format": "<span font='JetBrain Mono 15'>󰣇</span>",
@@ -118,5 +118,14 @@
         "on-click": "onedrivegui",
         "tooltip": true,
         "tooltip-format": "Onedrive sync"
+    },
+    "custom/scroller-mode": {
+        "exec": "~/.config/waybar/scroller_mode_reader.sh",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "hyprctl dispatch submap reset && pkill -SIGRTMIN+8 waybar",
+        "format": "Mode:{icon}",
+        "format-icons": ["", "󱗆", ""],
     }
 }
